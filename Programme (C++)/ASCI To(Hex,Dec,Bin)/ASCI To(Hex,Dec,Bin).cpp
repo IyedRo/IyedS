@@ -8,7 +8,7 @@ int main(){
     cout<<"Input Character One: ";
     cin>>ch;
     while (ch.length()!=1) {
-        cout<<"Please input only one character: "<<endl;
+        cout<<"Please input only one character: ";
         cin>>ch;
     }
     int chr=int(ch[0]);
