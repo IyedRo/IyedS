@@ -1,36 +1,47 @@
 #include <iostream>
-using namespace std;
 
-int main (){
-    int a,b;
-    string c;
-    char r;
+int main()
+{
+    int a, b;
+    char o;
 
+    std::cout << "Input Number: ";
+    std::cin >> a;
+    std::cout << "Input Number: ";
+    std::cin >> b;
+    std::cout << "Choose('+','-','/','*'): ";
+    std::cin >> o;
 
-    cout<<"Input Number: ";
-    cin>>a;
-    cout<<"Input Number: ";
-    cin>>b;
-    cout<<"Choose('+','-','/','*'): ";
-    cin>>r;
-
-    if (r=='+') {
-        cout<<a+b<<endl;
-    } else if (r=='-'){
-        cout<<a-b<<endl;
-    } else if (r=='*'){
-        cout<<a*b<<endl;
-    } else if (r=='/'){
-        if (b!=0){
-            cout<<a/b<<endl;
-        } else {
-            cout<<"Error!"<<endl;
+    if (o == '+')
+    {
+        std::cout << a + b << std::endl;
+    }
+    else if (o == '-')
+    {
+        std::cout << a - b << std::endl;
+    }
+    else if (o == '*')
+    {
+        std::cout << a * b << std::endl;
+    }
+    else if (o == '/')
+    {
+        if (b != 0)
+        {
+            std::cout << a / b << std::endl;
         }
-    } else {
-        cout<<"Invalid Input!"<<endl;
+        else
+        {
+            std::cout << "Error: Division by zero!" << std::endl;
+        }
+    }
+    else
+    {
+        std::cout << "Invalid Input!" << std::endl;
     }
 
-
-
+    std::cout << "Press Enter to close...";
+    std::cin.ignore();
+    std::cin.get();
     return 0;
 }

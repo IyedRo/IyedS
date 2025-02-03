@@ -1,30 +1,32 @@
 #include <iostream>
-using namespace std;
 
-int main(){
+int main()
+{
     //Type Case
-    cout<<"===================="<<endl;
-    cout<<sizeof(int)<<endl;//4
-    cout<<sizeof(float)<<endl;//4
-    cout<<sizeof(double)<<endl;//8
-    cout<<sizeof(string)<<endl;//32
+    std::cout<<"===================="<<std::endl;
+    std::cout<<sizeof(int)<<std::endl;//4
+    std::cout<<sizeof(float)<<std::endl;//4
+    std::cout<<sizeof(double)<<std::endl;//8
+    std::cout<<sizeof(std::string)<<std::endl;//32
     //Test
-    cout<<"===================="<<endl;
+    std::cout<<"===================="<<std::endl;
     int num=10;
     num=20.5;//Update But Get Int Without Float
-    cout<<num<<";"<<sizeof(num)<<endl;
+    std::cout<<num<<";"<<sizeof(num)<<std::endl;
     float nums=20.5;
     nums=10;//Update But Get Int Or Float
-    cout<<nums<<";"<<sizeof(nums)<<endl;
+    std::cout<<nums<<";"<<sizeof(nums)<<std::endl;
     double dob=19.9;
-    cout<<dob<<";"<<sizeof(dob)<<endl;
+    std::cout<<dob<<";"<<sizeof(dob)<<std::endl;
     float fl=10.5+9.5;
-    cout<<fl<<";"<<sizeof(fl)<<endl;
-    cout<<"===================="<<endl;
+    std::cout<<fl<<";"<<sizeof(fl)<<std::endl;
+    std::cout<<"===================="<<std::endl;
     char a='A';
-    cout<<a<<";"<<int(a)<<endl;
+    std::cout<<a<<";"<<int(a)<<std::endl;
     auto b='B';
-    cout<<b<<";"<<int(b)<<endl;
+    std::cout<<b<<";"<<int(b)<<std::endl;
 
+    std::cout << "Press Enter to close...";
+    std::cin.get();
     return 0;
 }

@@ -1,23 +1,26 @@
 #include <iostream>
 #include <bitset>
 #include <iomanip>
-using namespace std;
 
-int main(){
-    string ch;
-    cout<<"Input Character One: ";
-    cin>>ch;
-    while (ch.length()!=1) {
-        cout<<"Please input only one character: ";
-        cin>>ch;
+int main()
+{
+    std::string ch;
+    std::cout<<"Input Character One: ";
+    std::cin>>ch;
+    while (ch.length()!=1)
+    {
+        std::cout<<"Please input only one character: ";
+        std::cin>>ch;
     }
     int chr=int(ch[0]);
-    bitset<8> binary(chr);
-    cout<<"Converted: "<<ch<<endl;
-    cout<<"ASCII Value (Decimal): "<<chr<<endl;
-    cout<<"ASCII Value (Hexadecimal): "<<hex<<chr<<endl;
-    cout<<"ASCII Value (Binary): "<<binary<<endl;
+    std::bitset<8> binary(chr);
+    std::cout<<"Converted: "<<ch<<std::endl;
+    std::cout<<"ASCII Value (Decimal): "<<chr<<std::endl;
+    std::cout<<"ASCII Value (Hexadecimal): "<<std::hex<<chr<<std::endl;
+    std::cout<<"ASCII Value (Binary): "<<binary<<std::endl;
 
-
+    std::cout << "Press Enter to close...";
+    std::cin.ignore();
+    std::cin.get();
     return 0;
 }
