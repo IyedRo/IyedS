@@ -1,0 +1,223 @@
+Windows Registry Editor Version 5.00
+
+; ==================================================
+; ULTIMATE PERFORMANCE TWEAKS v2 (IYS Optimized)
+; ==================================================
+
+; --------------------------
+; CORE SYSTEM PERFORMANCE
+; --------------------------
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management]
+"DisablePagingExecutive"=dword:00000001
+"LargeSystemCache"=dword:00000001
+"IoPageLockLimit"=dword:00040000
+"ClearPageFileAtShutdown"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\PriorityControl]
+"Win32PrioritySeparation"=hex:26
+"IRQ8Priority"=dword:00000001
+
+; --------------------------
+; CPU & GPU SCHEDULING
+; --------------------------
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile]
+"AlwaysOn"=dword:00000001
+"SystemResponsiveness"=dword:00000000
+"NetworkThrottlingIndex"=dword:ffffffff
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Multimedia\SystemProfile\Tasks\UltraPerf]
+"Affinity"=dword:00000000
+"Scheduling Category"="High"
+"SFIO Priority"="Critical"
+"Priority"=dword:00000001
+"GPU Priority"=dword:00000008
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers]
+"HwSchMode"=dword:00000002
+
+; --------------------------
+; STORAGE OPTIMIZATIONS
+; --------------------------
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Session Manager\Memory Management\PrefetchParameters]
+"EnablePrefetcher"=dword:00000000
+"EnableSuperfetch"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\FileSystem]
+"NtfsDisableLastAccessUpdate"=dword:00000001
+"NtfsDisable8dot3NameCreation"=dword:00000001
+"DisableDeleteNotification"=dword:00000001
+"LongPathsEnabled"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\stornvme\Parameters]
+"EnableIdlePowerManagement"=dword:00000000
+
+; --------------------------
+; NETWORK OPTIMIZATIONS
+; --------------------------
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\Tcpip\Parameters]
+"TcpAckFrequency"=dword:00000001
+"TCPNoDelay"=dword:00000001
+"DefaultTTL"=dword:00000040
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Psched]
+"NonBestEffortLimit"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\Software\Microsoft\PolicyManager\default\WiFi]
+"AllowWiFiHotSpotReporting"=dword:00000000
+"AllowAutoConnectToWiFiSenseHotspots"=dword:00000000
+
+; --------------------------
+; POWER MANAGEMENT
+; --------------------------
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power]
+"HibernateEnabled"=dword:00000000
+"PlatformAoAcOverride"=dword:00000000
+"PowerThrottlingOff"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\bc5038f7-23e0-4960-96da-33abaf5935ec]
+"Attributes"=dword:00000002
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\Power\PowerSettings\54533251-82be-4824-96c1-47b60b740d00\be337238-0d82-4146-a960-4f3749d470c7]
+"Attributes"=dword:00000002
+
+; --------------------------
+; INPUT & PERIPHERALS
+; --------------------------
+[HKEY_CURRENT_USER\Control Panel\Mouse]
+"MouseSensitivity"="10"
+"MouseSpeed"="0"
+"MouseThreshold1"="0"
+"MouseThreshold2"="0"
+"MouseTrails"="0"
+
+[HKEY_CURRENT_USER\Control Panel\Keyboard]
+"KeyboardDelay"="0"
+"KeyboardSpeed"="48"
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USB]
+"DisableSelectiveSuspend"=dword:00000001
+
+; --------------------------
+; VISUAL PERFORMANCE
+; --------------------------
+[HKEY_CURRENT_USER\Control Panel\Desktop]
+"DragFullWindows"="0"
+"FontSmoothing"="2"
+"MenuShowDelay"="0"
+"Wallpaper"=""
+"UserPreferencesMask"=hex:90,00,00,80
+
+[HKEY_CURRENT_USER\Control Panel\Desktop\WindowMetrics]
+"MinAnimate"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\DWM]
+"EnableAeroPeek"=dword:00000000
+"AlwaysHibernateThumbnails"=dword:00000000
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\Themes\Personalize]
+"EnableTransparency"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced]
+"ListviewAlphaSelect"=dword:00000000
+"TaskbarAnimations"=dword:00000000
+"DisallowShaking"=dword:00000001
+
+; --------------------------
+; GAMING OPTIMIZATIONS
+; --------------------------
+[HKEY_CURRENT_USER\System\GameConfigStore]
+"GameDVR_DXGIHonorFSEWindowsCompatible"=dword:00000000
+"GameDVR_EFSEFeatureFlags"=dword:00000000
+"GameDVR_Enabled"=dword:00000000
+"GameDVR_FSEBehaviorMode"=dword:00000000
+"GameDVR_HonorUserFSEBehaviorMode"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\GameDVR]
+"AllowGameDVR"=dword:00000000
+
+[HKEY_CURRENT_USER\Software\Microsoft\Windows\CurrentVersion\GameDVR]
+"AppCaptureEnabled"=dword:00000000
+"AudioCaptureEnabled"=dword:00000000
+"CursorCaptureEnabled"=dword:00000000
+"HistoricalCaptureEnabled"=dword:00000000
+
+; --------------------------
+; BACKGROUND PROCESS CONTROL
+; --------------------------
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\System]
+"DisableBackgroundActivity"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\AppPrivacy]
+"LetAppsRunInBackground"=dword:00000002
+
+[HKEY_CURRENT_USER\SOFTWARE\Microsoft\Windows\CurrentVersion\BackgroundAccessApplications]
+"GlobalUserDisabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control]
+"WaitToKillServiceTimeout"=dword:00001000
+
+; --------------------------
+; PRIVACY & TELEMETRY
+; --------------------------
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\DataCollection]
+"AllowTelemetry"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Policies\DataCollection]
+"AllowTelemetry"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\Windows Search]
+"AllowCortana"=dword:00000000
+"DisableWebSearch"=dword:00000001
+"ConnectedSearchUseWeb"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\CapabilityAccessManager\ConsentStore\location]
+"Value"="Deny"
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Sensor\Overrides\{BFA794E4-F964-4FDB-90F6-51056BFE4B44}]
+"SensorPermissionState"=dword:00000000
+
+; --------------------------
+; WINDOWS SERVICES
+; --------------------------
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\WSearch]
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\wuauserv]
+"Start"=dword:00000004
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Schedule\Maintenance]
+"MaintenanceDisabled"=dword:00000001
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\Windows Error Reporting]
+"Disabled"=dword:00000001
+
+; --------------------------
+; SECURITY (Balanced)
+; --------------------------
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender]
+"DisableAntiSpyware"=dword:00000000
+
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows Defender\Real-Time Protection]
+"DisableBehaviorMonitoring"=dword:00000000
+"DisableOnAccessProtection"=dword:00000000
+"DisableScanOnRealtimeEnable"=dword:00000000
+
+; --------------------------
+; USER INTERFACE
+; --------------------------
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Dsh]
+"AllowNewsAndInterests"=dword:00000000
+
+; --------------------------
+; BROWSER OPTIMIZATIONS
+; --------------------------
+[HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Edge]
+"HideFirstRunExperience"=dword:00000001
+"PersonalizationReportingEnabled"=dword:00000000
+"ShowRecommendationsEnabled"=dword:00000000
+"WebWidgetAllowed"=dword:00000000
+"DiagnosticData"=dword:00000000
+"EdgeAssetDeliveryServiceEnabled"=dword:00000000
+"EdgeCollectionsEnabled"=dword:00000000
+"CryptoWalletEnabled"=dword:00000000
+"WalletDonationEnabled"=dword:00000000
